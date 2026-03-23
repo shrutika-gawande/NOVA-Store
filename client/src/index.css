@@ -1,0 +1,25 @@
+:root {
+    --bg: #0d0d0d;
+    --surface: #161616;
+    --surface2: #1f1f1f;
+    --border: #2a2a2a;
+    --text: #f0ece4;
+    --muted: #7a7570;
+    --accent: #e8c87a;
+    --accent2: #c8a85a;
+    --red: #e05a4e;
+    --green: #4eae8a;
+    --card-hover: #1c1c1c;
+    --radius: 12px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+ 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
