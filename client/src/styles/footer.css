@@ -1,0 +1,12 @@
+footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
