@@ -4,7 +4,7 @@ import { IoCart } from "react-icons/io5";
 function Navbar() {
     return (
         <nav className='container'>
-            <a href="#" class="logo">NO<span>VA</span></a>
+            <a href="#" className="logo">NO<span>VA</span></a>
             <input
                 type='text'
                 placeholder='🔍︎   Search products...'
