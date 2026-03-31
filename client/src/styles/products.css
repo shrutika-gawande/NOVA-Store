@@ -1,0 +1,24 @@
+.productPage {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sidebar {
+    width: 20%;
+    flex-shrink: 0;
+}
+
+.products {
+    flex: 1;         
+    min-width: 0;     
+}
+
+@media (max-width: 768px) {
+  .productPage {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}
