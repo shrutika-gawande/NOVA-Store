@@ -1,19 +1,22 @@
 .product-card {
     border: 1px solid var(--border);
-    height: 350px;
+    height: 400px;
+    max-width: 300px;
     border-radius: 10px;
     transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover {
     border-color: var(--accent);
-    cursor: pointer;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 } 
 
 .product-img {
-    height: 12rem;
+    height: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +30,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 20px 10px;
+    flex: 1;
 }
 
 .product-category {
@@ -55,6 +59,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto; 
 }
 
 .oldPrice{
