@@ -1,7 +1,7 @@
 import { CiSearch } from "react-icons/ci";
 import "../styles/navbar.css"
 import { IoCart } from "react-icons/io5";
-function Navbar({ searchTerm, setSearchTerm }) {
+function Navbar({ searchTerm, setSearchTerm, onCartClick }) {
     return (
         <nav className='container'>
             <a href="#" className="logo">NO<span>VA</span></a>
@@ -15,7 +15,9 @@ function Navbar({ searchTerm, setSearchTerm }) {
                 />
             </div>
 
-            <button className="cart">
+            <button className="cart" onClick={() => {
+                onCartClick();
+            }}>
                 <div className="cart-symbol"><IoCart /></div>
                 Cart
             </button>
