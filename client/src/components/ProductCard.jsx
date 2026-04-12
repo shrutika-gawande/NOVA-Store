@@ -1,6 +1,26 @@
 import "../styles/productCard.css"
+import { useState } from "react";
+import toast from 'react-hot-toast';
 
 function ProductCard({ product }) {
+
+    const [added, setAdded] = useState(false);
+
+    const handleAdd = (e) => {
+        e.stopPropagation();
+        setAdded(true);
+        toast.success(`Added "${product.name.slice(0, 22)}…" to cart!`, {
+            style: {
+                background: '#1f1f1f',
+                color: '#f0ece4',
+                border: '1px solid #e8c87a',
+                fontSize: '0.85rem',
+            },
+            iconTheme: { primary: '#e8c87a', secondary: '#0d0d0d' },
+        });
+        setTimeout(() => setAdded(false), 1800);
+    };
+
     return (
         <div>
             <div className="product-card">
@@ -18,7 +38,7 @@ function ProductCard({ product }) {
                             {product.oldPrice && (<div className="oldPrice">&#8377;{product.oldPrice}</div>)}
                             <div className="newPrice">&#8377;{product.price}</div>
                         </div>
-                        <button className="addBtn">+&nbsp;Add</button></div>
+                        <button className={`addBtn ${ added ? "addedBtn" : "" }`} onClick={handleAdd}>{added ? '✓ Added' : '+ Add'}</button></div>
                 </div>
             </div>
         </div>
