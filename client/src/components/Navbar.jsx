@@ -1,7 +1,13 @@
 import { CiSearch } from "react-icons/ci";
 import "../styles/navbar.css"
 import { IoCart } from "react-icons/io5";
+import { useCart } from '../context/CartContext';
+
+
 function Navbar({ searchTerm, setSearchTerm, onCartClick }) {
+
+    const { totalItems } = useCart();
+
     return (
         <nav className='container'>
             <a href="#" className="logo">NO<span>VA</span></a>
@@ -15,13 +21,16 @@ function Navbar({ searchTerm, setSearchTerm, onCartClick }) {
                 />
             </div>
 
-            <button className="cart" onClick={() => {
-                onCartClick();
-            }}>
-                <div className="cart-symbol"><IoCart /></div>
-                Cart
-            </button>
-
+            <div className="nav-actions">
+               
+                <button className="cart" onClick={() => {
+                    onCartClick();
+                }}>
+                    <div className="cart-symbol"><IoCart /></div>
+                    Cart
+                    {totalItems > 0 && <span className="badge">{totalItems}</span>}
+                </button>
+            </div>
         </nav>
     )
 }
