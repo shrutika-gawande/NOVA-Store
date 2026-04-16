@@ -1,13 +1,15 @@
 import "../styles/productCard.css"
 import { useState } from "react";
 import toast from 'react-hot-toast';
+import { useCart } from '../context/CartContext';
 
 function ProductCard({ product }) {
-
+    const { dispatch } = useCart();
     const [added, setAdded] = useState(false);
 
     const handleAdd = (e) => {
         e.stopPropagation();
+        dispatch({ type: 'ADD', product });
         setAdded(true);
         toast.success(`Added "${product.name.slice(0, 22)}…" to cart!`, {
             style: {
