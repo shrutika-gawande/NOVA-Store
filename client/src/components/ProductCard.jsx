@@ -26,7 +26,15 @@ function ProductCard({ product }) {
     return (
         <div>
             <div className="product-card">
-                <div className="product-img">{product.emoji}</div>
+                <div className="imgWrap">
+                    {product.badge && (
+                        <span className={`badge ${product.badge === 'New' ? 'badgeNew' : ''}`}>
+                            {product.badge}
+                        </span>
+                    )}
+                    <div className="product-img">{product.emoji}</div>
+                </div>
+                
                 <div className="product-info">
                     <div className="product-category">{product.cat}</div>
                     <div className="product-name">{product.name}</div>
@@ -40,7 +48,7 @@ function ProductCard({ product }) {
                             {product.oldPrice && (<div className="oldPrice">&#8377;{product.oldPrice}</div>)}
                             <div className="newPrice">&#8377;{product.price}</div>
                         </div>
-                        <button className={`addBtn ${ added ? "addedBtn" : "" }`} onClick={handleAdd}>{added ? '✓ Added' : '+ Add'}</button></div>
+                        <button className={`addBtn ${added ? "addedBtn" : ""}`} onClick={handleAdd}>{added ? '✓ Added' : '+ Add'}</button></div>
                 </div>
             </div>
         </div>
