@@ -1,13 +1,16 @@
 import ProductCard from "../components/ProductCard"
-import products from "../seed.js"
 import "../styles/productGrid.css"
 
-function ProductGrid() {
+function ProductGrid({ products }) {
   return (
     <div className="product-grid">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      {products.length > 0 ? (
+        products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))
+      ) : (
+      <p>No products found</p>  
+    )}
     </div>
   )
 }
