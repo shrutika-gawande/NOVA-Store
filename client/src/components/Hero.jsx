@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div className='hero'>
       <div className="hero-inner">
-        <div className="hero-badge">✦ Summer Collection 2025</div>
+        <div className="hero-badge">✦ Summer Collection {new Date().getFullYear()}</div>
         <div className="heading">
           <h1>Discover <em>curated</em><br />collections you love</h1>
           <p>Handpicked products across Electronics, Fashion, Home & Books — with unbeatable prices.</p>
