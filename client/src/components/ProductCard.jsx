@@ -32,7 +32,7 @@ function ProductCard({ product }) {
                             {product.badge}
                         </span>
                     )}
-                    <div className="product-img">{product.emoji}</div>
+                    <img className="product-img" src={product.emoji} alt={product.name} />
                 </div>
                 
                 <div className="product-info">
