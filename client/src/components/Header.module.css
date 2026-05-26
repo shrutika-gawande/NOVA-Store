@@ -1,0 +1,155 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 13, 13, 0.88);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #2a2a2a;
+  padding: 0 2rem;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #f0ece4;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.logo span {
+  color: #e8c87a;
+}
+
+.searchBar {
+  flex: 1;
+  max-width: 420px;
+  position: relative;
+}
+
+.searchBar svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a7570;
+  pointer-events: none;
+}
+.searchBar input {
+  width: 100%;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 0.6rem 1rem 0.6rem 2.6rem;
+  color: #f0ece4;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.searchBar input:focus {
+  border-color: #e8c87a;
+}
+.searchBar input::placeholder {
+  color: #7a7570;
+}
+
+.cartBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #e8c87a;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.1rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+  white-space: nowrap;
+  position: relative;
+}
+.cartBtn:hover {
+  background: #c8a85a;
+  transform: translateY(-1px);
+}
+
+.badge {
+  background: #0d0d0d;
+  color: #e8c87a;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 1rem;
+  }
+  .searchBar {
+    display: none;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+.linkBtn {
+  background: none;
+  border: none;
+  color: #7a7570;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.linkBtn:hover {
+  color: #f0ece4;
+}
+.adminBtn {
+  background: rgba(232, 200, 122, 0.1);
+  border: 1px solid rgba(232, 200, 122, 0.25);
+  color: #e8c87a;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.adminBtn:hover {
+  background: rgba(232, 200, 122, 0.18);
+}

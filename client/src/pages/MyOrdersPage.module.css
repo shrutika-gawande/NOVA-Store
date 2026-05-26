@@ -1,0 +1,60 @@
+.page { min-height: 100vh; background: #0d0d0d; padding: 2rem; }
+.inner { max-width: 860px; margin: 0 auto; }
+
+.header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 2rem; gap: 1rem; flex-wrap: wrap; }
+.pageTitle { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: #f0ece4; }
+.pageSub { font-size: 0.85rem; color: #7a7570; margin-top: 0.25rem; }
+.shopBtn { background: none; border: 1px solid #2a2a2a; color: #e8c87a; border-radius: 8px; padding: 0.55rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+.shopBtn:hover { background: rgba(232,200,122,0.08); }
+
+.skeletonCard { height: 72px; background: #161616; border: 1px solid #2a2a2a; border-radius: 12px; margin-bottom: 0.75rem; animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.45} }
+
+.empty { text-align: center; padding: 4rem 2rem; color: #7a7570; }
+.empty span { font-size: 3rem; display: block; margin-bottom: 0.75rem; }
+.empty h2 { font-family: 'Playfair Display', serif; color: #f0ece4; font-size: 1.3rem; margin-bottom: 0.4rem; }
+.empty p { font-size: 0.875rem; margin-bottom: 1.25rem; }
+.empty button { background: #e8c87a; color: #0d0d0d; border: none; border-radius: 8px; padding: 0.65rem 1.4rem; font-family: 'DM Sans', sans-serif; font-weight: 700; cursor: pointer; }
+
+.orderList { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.orderCard { background: #161616; border: 1px solid #2a2a2a; border-radius: 12px; overflow: hidden; transition: border-color 0.2s; }
+.orderCard:hover { border-color: #3a3a3a; }
+
+.orderHeader { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; cursor: pointer; gap: 1rem; flex-wrap: wrap; }
+.orderMeta { display: flex; align-items: center; gap: 0.75rem; }
+.orderNum { font-weight: 700; color: #f0ece4; font-size: 0.9rem; font-family: 'DM Sans', sans-serif; }
+.orderRight { display: flex; align-items: center; gap: 1rem; }
+.orderTotal { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: #e8c87a; }
+.orderDate { font-size: 0.78rem; color: #7a7570; }
+.chevron { font-size: 0.65rem; color: #4a4a4a; }
+
+.orderBody { border-top: 1px solid #2a2a2a; padding: 1.25rem; display: flex; flex-direction: column; gap: 1.25rem; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.sectionLabel { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7a7570; margin-bottom: 0.5rem; }
+
+.itemList { display: flex; flex-direction: column; gap: 0.4rem; }
+.item { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.75rem; background: #1f1f1f; border-radius: 8px; }
+.itemEmoji { font-size: 1.3rem; }
+.itemName { flex: 1; font-size: 0.83rem; color: #f0ece4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.itemQty { font-size: 0.78rem; color: #7a7570; white-space: nowrap; }
+.itemPrice { font-size: 0.875rem; font-weight: 600; color: #e8c87a; white-space: nowrap; }
+
+.detailsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.infoBox { background: #1f1f1f; border: 1px solid #2a2a2a; border-radius: 10px; padding: 0.9rem 1rem; font-size: 0.83rem; color: #b0a898; line-height: 1.7; }
+.infoBox strong { color: #f0ece4; }
+.summaryRow { display: flex; justify-content: space-between; font-size: 0.83rem; color: #7a7570; padding: 0.2rem 0; }
+.summaryTotal { border-top: 1px solid #2a2a2a; padding-top: 0.4rem; margin-top: 0.3rem; font-weight: 700; color: #f0ece4; }
+
+.timeline { display: flex; flex-direction: column; gap: 0.6rem; }
+.timelineItem { display: flex; align-items: flex-start; gap: 0.75rem; }
+.timelineDot { width: 8px; height: 8px; border-radius: 50%; background: #e8c87a; flex-shrink: 0; margin-top: 0.3rem; }
+.timelineNote { font-size: 0.78rem; color: #7a7570; }
+.timelineDate { font-size: 0.72rem; color: #4a4a4a; margin-top: 0.2rem; }
+
+@media (max-width: 600px) {
+  .detailsGrid { grid-template-columns: 1fr; }
+  .orderRight { gap: 0.5rem; }
+  .orderDate { display: none; }
+}

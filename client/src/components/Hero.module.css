@@ -1,0 +1,94 @@
+.tickerWrap {
+  background: #e8c87a;
+  padding: 0.55rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker {
+  display: inline-flex;
+  animation: ticker 22s linear infinite;
+}
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.tickerInner { display: inline-flex; gap: 3rem; padding-right: 3rem; }
+.tickerItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0d0d0d;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(0,0,0,0.3); flex-shrink: 0; }
+
+.hero {
+  background: linear-gradient(135deg, #1a1400 0%, #0d0d0d 40%, #0a1a12 100%);
+  border-bottom: 1px solid #2a2a2a;
+  padding: 3.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232,200,122,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.text {}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(232,200,122,0.12);
+  border: 1px solid rgba(232,200,122,0.25);
+  color: #e8c87a;
+  border-radius: 100px;
+  padding: 0.4rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+.text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #f0ece4;
+  margin-bottom: 0.75rem;
+}
+.text h1 em { color: #e8c87a; font-style: italic; }
+.text p {
+  color: #7a7570;
+  font-size: 0.95rem;
+  max-width: 400px;
+  line-height: 1.6;
+}
+.stats { display: flex; gap: 2rem; flex-wrap: wrap; }
+.stat { text-align: center; }
+.num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e8c87a;
+}
+.label { font-size: 0.73rem; color: #7a7570; margin-top: 0.2rem; }
+
+@media (max-width: 480px) {
+  .hero { padding: 2rem 1rem; }
+  .stats { gap: 1.5rem; }
+}

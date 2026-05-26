@@ -1,0 +1,259 @@
+.pageHeader {
+  margin-bottom: 1.75rem;
+}
+.pageTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #f0ece4;
+}
+.pageSub {
+  font-size: 0.85rem;
+  color: #7a7570;
+  margin-top: 0.25rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.statCard {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.statIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+.statLabel {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #7a7570;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.statValue {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.statSub {
+  font-size: 0.72rem;
+  color: #4a4a4a;
+  margin-top: 0.25rem;
+}
+
+.skeletonCard {
+  height: 110px;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.panel:last-child {
+  margin-bottom: 0;
+}
+.panelTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f0ece4;
+  margin-bottom: 1.25rem;
+}
+.emptyMsg {
+  font-size: 0.85rem;
+  color: #4a4a4a;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* Status breakdown */
+.statusList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.statusName {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #b0a898;
+  width: 90px;
+  flex-shrink: 0;
+  text-transform: capitalize;
+}
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.statusBar {
+  flex: 1;
+  height: 6px;
+  background: #2a2a2a;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.statusBarFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+.statusCount {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f0ece4;
+  width: 28px;
+  text-align: right;
+}
+
+/* Top products */
+.topList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.topItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  background: #1f1f1f;
+  border-radius: 8px;
+}
+.topRank {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e8c87a;
+  width: 24px;
+  flex-shrink: 0;
+}
+.topInfo {
+  min-width: 0;
+}
+.topName {
+  font-size: 0.82rem;
+  color: #f0ece4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.topMeta {
+  font-size: 0.72rem;
+  color: #7a7570;
+  margin-top: 0.15rem;
+}
+
+/* Table */
+.tableWrap {
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.table th {
+  text-align: left;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #7a7570;
+  font-weight: 600;
+  padding: 0 0.75rem 0.75rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+.table td {
+  padding: 0.85rem 0.75rem;
+  border-bottom: 1px solid #1a1a1a;
+  vertical-align: middle;
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+.table tr:hover td {
+  background: #1a1a1a;
+}
+
+.orderNum {
+  font-weight: 700;
+  color: #f0ece4;
+  font-size: 0.83rem;
+}
+.custName {
+  color: #f0ece4;
+  font-size: 0.83rem;
+  font-weight: 500;
+}
+.custEmail {
+  color: #7a7570;
+  font-size: 0.72rem;
+}
+.amount {
+  font-family: "Playfair Display", serif;
+  color: #e8c87a;
+  font-weight: 700;
+}
+.statusPill {
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.dateCell {
+  color: #7a7570;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 540px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

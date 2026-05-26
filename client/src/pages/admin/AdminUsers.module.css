@@ -1,0 +1,27 @@
+.pageHeader { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem; flex-wrap: wrap; }
+.pageTitle { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; color: #f0ece4; }
+.pageSub { font-size: 0.85rem; color: #7a7570; margin-top: 0.25rem; }
+.searchInput { background: #161616; border: 1px solid #2a2a2a; border-radius: 8px; padding: 0.55rem 0.9rem; color: #f0ece4; font-family: 'DM Sans', sans-serif; font-size: 0.875rem; outline: none; transition: border-color 0.2s; min-width: 220px; }
+.searchInput:focus { border-color: #e8c87a; }
+.searchInput::placeholder { color: #4a4a4a; }
+
+.skeletonRow { height: 52px; background: #161616; border: 1px solid #2a2a2a; border-radius: 8px; margin-bottom: 0.4rem; animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.45} }
+
+.tableWrap { overflow-x: auto; border: 1px solid #2a2a2a; border-radius: 12px; }
+.table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 520px; }
+.table th { text-align: left; font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.1em; color: #7a7570; font-weight: 600; padding: 0.75rem 1rem; border-bottom: 1px solid #2a2a2a; background: #111; }
+.table td { padding: 0.85rem 1rem; border-bottom: 1px solid #1a1a1a; vertical-align: middle; }
+.table tr:last-child td { border-bottom: none; }
+.table tbody tr:hover td { background: #181818; }
+
+.idxCell { color: #4a4a4a; font-size: 0.78rem; width: 36px; }
+.userCell { display: flex; align-items: center; gap: 0.65rem; }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(232,200,122,0.15); color: #e8c87a; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.name { font-size: 0.875rem; color: #f0ece4; font-weight: 500; }
+.email { font-size: 0.8rem; color: #7a7570; }
+.roleAdmin { background: rgba(232,200,122,0.12); color: #e8c87a; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+.roleCustomer { background: rgba(100,160,255,0.1); color: #64a0ff; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+.dateCell { color: #7a7570; font-size: 0.78rem; white-space: nowrap; }
+.empty { text-align: center; padding: 3rem; color: #7a7570; }
+.empty span { font-size: 2rem; display: block; margin-bottom: 0.4rem; }

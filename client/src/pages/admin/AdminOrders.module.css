@@ -1,0 +1,56 @@
+.pageHeader { margin-bottom: 1.5rem; }
+.pageTitle { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; color: #f0ece4; }
+.pageSub { font-size: 0.85rem; color: #7a7570; margin-top: 0.25rem; }
+
+.filterBar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.statusTabs { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.tab { background: none; border: 1px solid #2a2a2a; color: #7a7570; border-radius: 6px; padding: 0.4rem 0.75rem; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; text-transform: capitalize; }
+.tab:hover { border-color: #3a3a3a; color: #f0ece4; }
+.tabActive { background: rgba(232,200,122,0.1); border-color: #e8c87a; color: #e8c87a; }
+.searchInput { background: #161616; border: 1px solid #2a2a2a; border-radius: 8px; padding: 0.5rem 0.85rem; color: #f0ece4; font-family: 'DM Sans', sans-serif; font-size: 0.875rem; outline: none; transition: border-color 0.2s; min-width: 180px; }
+.searchInput:focus { border-color: #e8c87a; }
+.searchInput::placeholder { color: #4a4a4a; }
+
+.loadingWrap { display: flex; flex-direction: column; gap: 0.5rem; }
+.skeletonRow { height: 52px; background: #161616; border: 1px solid #2a2a2a; border-radius: 8px; animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.45} }
+.empty { text-align: center; padding: 3rem; color: #7a7570; font-size: 0.9rem; }
+.empty span { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+
+.tableWrap { overflow-x: auto; border: 1px solid #2a2a2a; border-radius: 12px; }
+.table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 800px; }
+.table th { text-align: left; font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.1em; color: #7a7570; font-weight: 600; padding: 0.75rem 0.85rem; border-bottom: 1px solid #2a2a2a; background: #111; white-space: nowrap; }
+.table td { padding: 0.8rem 0.85rem; border-bottom: 1px solid #1a1a1a; vertical-align: middle; }
+.table tr:last-child td { border-bottom: none; }
+.table tbody tr:hover td { background: #181818; }
+.expandedRow td { background: #1a1a1a !important; }
+
+.expandBtn { background: none; border: none; color: #4a4a4a; font-size: 0.7rem; cursor: pointer; padding: 0.2rem 0.4rem; transition: color 0.2s; }
+.expandBtn:hover { color: #e8c87a; }
+
+.orderNum { font-weight: 700; color: #f0ece4; font-size: 0.83rem; white-space: nowrap; }
+.custName { color: #f0ece4; font-size: 0.83rem; font-weight: 500; white-space: nowrap; }
+.custEmail { color: #7a7570; font-size: 0.7rem; }
+.itemCount { color: #b0a898; font-size: 0.8rem; white-space: nowrap; }
+.amount { font-family: 'Playfair Display', serif; color: #e8c87a; font-weight: 700; }
+.payBadge { background: #1f1f1f; border: 1px solid #2a2a2a; color: #b0a898; font-size: 0.68rem; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700; }
+.dateCell { color: #7a7570; font-size: 0.78rem; white-space: nowrap; }
+
+.statusSelect { background: #1f1f1f; border: 1px solid #2a2a2a; border-radius: 6px; color: inherit; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; padding: 0.3rem 0.5rem; outline: none; cursor: pointer; transition: border-color 0.2s; }
+.statusSelect:focus { border-color: #e8c87a; }
+.statusSelect:disabled { opacity: 0.5; }
+
+.deleteBtn { background: none; border: none; cursor: pointer; font-size: 1rem; padding: 0.2rem 0.4rem; opacity: 0.4; transition: opacity 0.2s; border-radius: 5px; }
+.deleteBtn:hover { opacity: 1; background: rgba(224,90,78,0.1); }
+
+/* Expanded detail row */
+.detailRow td { padding: 0; background: #141414 !important; }
+.detailInner { padding: 1.25rem 1.5rem; border-top: 1px solid #2a2a2a; }
+.detailGrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+.detailLabel { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7a7570; margin-bottom: 0.6rem; }
+.detailItem { display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0; font-size: 0.8rem; border-bottom: 1px solid #1f1f1f; }
+.detailItemName { flex: 1; color: #f0ece4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.detailItemQty { color: #7a7570; }
+.detailItemPrice { color: #e8c87a; font-weight: 600; white-space: nowrap; }
+.addressBox { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.8rem; color: #b0a898; background: #1a1a1a; border-radius: 8px; padding: 0.75rem; }
+.addressBox strong { color: #f0ece4; }
