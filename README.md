@@ -28,6 +28,7 @@ PORT=5000
 MONGO_URI=mongodb://localhost:27017/novastore
 JWT_SECRET=nova_super_secret_jwt_key_2025
 NODE_ENV=development
+CLIENT_URL=http://localhost:5173
 ```
 
 ### 3. Seed the Database
@@ -49,7 +50,7 @@ Output:
 
 **Terminal 1 — Backend:**
 ```bash
-cd server && npm run dev
+cd server && node index.js
 # 🚀 Server → http://localhost:5000
 ```
 
@@ -179,9 +180,9 @@ nova-store/
 
 | Service | Use For |
 |---------|---------|
-| [Render](https://render.com) | Node.js backend (free tier) |
-| [Vercel](https://vercel.com) | React frontend |
-| [MongoDB Atlas](https://mongodb.com/atlas) | Cloud database |
+| [Render](https://nova-store-t8r2.onrender.com) | Node.js backend (free tier) |
+| [Vercel](https://nova-store-two-fawn.vercel.app/) | React frontend |
+| [MongoDB Atlas](https://cloud.mongodb.com/v2/6a15213f12cc7b9b005da306#/explorer/6a152158f51d49c07c003532/test) | Cloud database |
 
 Set `MONGO_URI` and `JWT_SECRET` as environment variables in your deployment platform.
 
